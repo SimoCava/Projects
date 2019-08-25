@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+/****************
+      HEADER
+****************/
+
+
+/****************
+      ABOUT
+****************/
+
+.about-section {
+  width: 100%;
+  background: #f1f1f1;
+  padding: 40px;
+}
+
+.about-section h2 {
+  color: #333;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.inner-width {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.about-section-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-section-col {
+  flex: 50%;
+}
+
+.about {
+  padding-right: 30px;
+}
+
+.about p {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.about a {
+  display: inline-block; /* Allows to set a width and height on the element */
+  color: #e74c3c;
+  text-decoration: none;
+  border: 2px solid #e74c3c;
+  padding: 8px 40px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  transition: 0.3s linear;
+}
+
+.about a:hover {
+  color: #fff;
+  background: #e74c3c;
+}
+
+.skills {
+  padding-left: 30px;
+}
+
+.skill {
+  margin-right: 10px;
+}
+
+.progress {
+  width: 100%;
+  height: 15px;
+  background: #ddd;
+  border-radius: 12px;
+}
+
+.progress-bar {
+  height: 15px;
+  background: #e74c3c;
+  border-radius: 12px;
+}
+
+.progress-bar span {
+  float: right;
+  margin-right: 5px;
+  line-height: 15px; /* Specifies the height of a line */
+  color: #fff;
+  font-size: 15px;
+}
+
+.p1 {
+  width: 70%;
+}
+
+.p2 {
+  width: 40%;
+}
+
+.p3 {
+  width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+  .about-section-col {
+    flex: 100%;
+    margin: 10px 0;
+  }
+  .about, .skills {
+    padding: 0;
+  }
+  .about {
+    text-align: center;
+  }
+}
+
+/****************
+    GALLERY
+****************/
+
+.gallery-section {
+  width: 100%;
+  padding: 15px;
+  background: #f1f1f1;
+}
+
+.gallery-section h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #333;
+  font-size: 40px;
+}
+
+.inner-width2 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.border {
+  width: 180px;
+  height: 4px;
+  background: #333;
+  margin: 25px auto;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Si adatta alla dimensione di .image senza sballare dimensione immagine */
+  transition: 0.4s; /* Durata effetto */
+}
+
+.image {
+  flex: 25%;
+  overflow: hidden; /* Nasconde spazi bianchi dovuti al flex: 25% */
+  cursor: pointer;
+  width: 100%; /* Larghezza quadrato contentente immagine */
+  height: 250px; /* altezza quadrato contentente immagine */
+}
+
+.image:hover img {
+  transform: scale(1.4) rotate(15deg);
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px) {
+  .image {
+    flex: 33.33%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .image {
+    flex: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image {
+    flex: 100%;
+  }
+}
