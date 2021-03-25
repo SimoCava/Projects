@@ -50,13 +50,12 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: url("/assets/fonts/DIN-Fonts/din-bold.eot");
-  src: url("/assets/fonts/DIN-Fonts/din-bold.eot?#iefix")
-      format("embedded-opentype"),
-    url("/assets/fonts/DIN-Fonts/din-bold.woff2") format("woff2"),
-    url("/assets/fonts/DIN-Fonts/din-bold.woff") format("woff"),
-    url("/assets/fonts/DIN-Fonts/din-bold.ttf") format("truetype"),
-    url("/assets/fonts/DIN-Fonts/din-bold.svg#din-bold") format("svg");
+  src: url("/assets/fonts/DIN-Fonts/DINPro-Bold.eot");
+  src: url("/assets/fonts/DIN-Fonts/DINPro-Bold.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/DIN-Fonts/DINPro-Bold.woff2") format("woff2"),
+    url("/assets/fonts/DIN-Fonts/DINPro-Bold.woff") format("woff"),
+    url("/assets/fonts/DIN-Fonts/DINPro-Bold.ttf") format("truetype"),
+    url("/assets/fonts/DIN-Fonts/DINPro-Bold.svg#DINPro-Bold") format("svg");
   unicode-range: U+0020 —007F;
 }
 
