@@ -36,13 +36,12 @@
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-  src: url("/assets/fonts/DIN-Fonts/din-medium.eot");
-  src: url("/assets/fonts/DIN-Fonts/din-medium.eot?#iefix")
-      format("embedded-opentype"),
-    url("/assets/fonts/DIN-Fonts/din-medium.woff2") format("woff2"),
-    url("/assets/fonts/DIN-Fonts/din-medium.woff") format("woff"),
-    url("/assets/fonts/DIN-Fonts/din-medium.ttf") format("truetype"),
-    url("/assets/fonts/DIN-Fonts/din-medium.svg#din-medium") format("svg");
+  src: url("/assets/fonts/DIN-Fonts/DINPro-Medium.eot");
+  src: url("/assets/fonts/DIN-Fonts/DINPro-Medium.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/DIN-Fonts/DINPro-Medium.svg#DINPro-Medium") format('svg'),
+    url("/assets/fonts/DIN-Fonts/DINPro-Medium.ttf") format("truetype"),
+    url("/assets/fonts/DIN-Fonts/DINPro-Medium.woff") format("woff"),
+    url("/assets/fonts/DIN-Fonts/DINPro-Medium.woff2") format("woff2");
   unicode-range: U+0020 —007F;
 }
 
