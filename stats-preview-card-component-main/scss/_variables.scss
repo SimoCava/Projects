@@ -1,0 +1,21 @@
+:root {
+  --main-background: hsla(233, 48.6%, 6.9%, 1);
+  --card-background: hsla(244, 38.3%, 15.9%, 1);
+  --accent: hsla(277, 63.8%, 61%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --stat-headings: hsla(0, 0%, 100%, 0.6);
+
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Lexend Deca', sans-serif;
+  --text-heading: 1.5rem;
+  --text-paragraph: 0.875rem;
+  --text-stats: 1.5rem;
+
+  --border-radius: 0.5rem;
+  --card-width: 1120px;
+}
+
+$breakpoints-up: (
+  'md': '60em',
+);

@@ -1,0 +1,162 @@
+:root {
+  --main-background: hsla(233, 48.6%, 6.9%, 1);
+  --card-background: hsla(244, 38.3%, 15.9%, 1);
+  --accent: hsla(277, 63.8%, 61%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --stat-headings: hsla(0, 0%, 100%, 0.6);
+  --font-primary: "Inter", sans-serif;
+  --font-secondary: "Lexend Deca", sans-serif;
+  --text-heading: 1.5rem;
+  --text-paragraph: 0.875rem;
+  --text-stats: 1.5rem;
+  --border-radius: 0.5rem;
+  --card-width: 1120px;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--main-background);
+  min-height: 100vh;
+  padding: 1.5rem;
+  color: var(--white);
+  display: grid;
+  place-items: center;
+}
+
+span {
+  color: var(--accent);
+}
+
+h1 {
+  --clamp: clamp(
+    var(--text-heading),
+    calc(var(--text-heading) + ((1vw - 0.234375rem) * 1.5023)),
+    2.5rem
+  );
+  font-size: var(--clamp);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--white);
+}
+
+h3 {
+  font-size: var(--text-stats);
+  font-weight: 700;
+  line-height: 1.5rem;
+  color: var(--white);
+}
+
+p {
+  --clamp: clamp(
+    var(--text-paragraph),
+    calc(var(--text-paragraph) + ((1vw - 0.234375rem) * 0.1878)),
+    1rem
+  );
+  font-size: var(--clamp);
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: var(--main-paragraph);
+  font-family: var(--font-secondary);
+}
+
+main {
+  --padding: 2.5rem;
+  --alignement: center;
+  --gap: 3rem;
+  padding: var(--padding);
+  text-align: var(--alignement);
+  display: grid;
+  grid-gap: var(--gap);
+}
+@media (min-width: 60em) {
+  main {
+    --alignement: left;
+    --padding: 4.5rem;
+    --gap: 4.5rem;
+  }
+}
+
+img {
+  --height: 100%;
+  --width: 100%;
+  --radius: var(--border-radius) var(--border-radius) 0 0;
+  width: var(--width);
+  height: var(--height);
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+@media (min-width: 60em) {
+  img {
+    --radius: 0 var(--border-radius) var(--border-radius) 0;
+    --width: 544px;
+  }
+}
+
+.card {
+  margin: 0 auto;
+  max-width: var(--card-width);
+  background: var(--card-background);
+  border-radius: var(--border-radius);
+}
+@media (min-width: 60em) {
+  .card {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.image {
+  position: relative;
+}
+
+.filter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--accent);
+  opacity: 0.6;
+}
+
+.description {
+  --gap: 1rem;
+  display: grid;
+  grid-gap: var(--gap);
+}
+@media (min-width: 60em) {
+  .description {
+    --gap: 2rem;
+  }
+}
+
+.stats {
+  display: grid;
+  grid-gap: 1.5rem;
+  text-transform: uppercase;
+}
+@media (min-width: 60em) {
+  .stats {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.stats__stat {
+  display: grid;
+  grid-gap: 0.5rem;
+}
+.stats__uppercase {
+  color: var(--stat-headings);
+  letter-spacing: 0.04em;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,128 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--main-background);
+  min-height: 100vh;
+  padding: 1.5rem;
+  color: var(--white);
+  display: grid;
+  place-items: center;
+}
+
+span {
+  color: var(--accent);
+}
+
+h1 {
+  --clamp: clamp(
+    var(--text-heading),
+    calc(var(--text-heading) + ((1vw - 0.234375rem) * 1.5023)),
+    2.5rem
+  );
+  @include headings(var(--clamp), 700, 1.2, var(--white));
+}
+
+h3 {
+  @include headings(var(--text-stats), 700, 1.5rem, var(--white));
+}
+
+p {
+  --clamp: clamp(
+    var(--text-paragraph),
+    calc(var(--text-paragraph) + ((1vw - 0.234375rem) * 0.1878)),
+    1rem
+  );
+  @include headings(var(--clamp), 400, 1.5rem, var(--main-paragraph));
+  font-family: var(--font-secondary);
+}
+
+main {
+  --padding: 2.5rem;
+  --alignement: center;
+  --gap: 3rem;
+  padding: var(--padding);
+  text-align: var(--alignement);
+  @include gap(grid, var(--gap));
+
+  @include mq(md) {
+    --alignement: left;
+    --padding: 4.5rem;
+    --gap: 4.5rem;
+  }
+}
+
+img {
+  --height: 100%;
+  --width: 100%;
+  --radius: var(--border-radius) var(--border-radius) 0 0;
+  width: var(--width);
+  height: var(--height);
+  object-fit: cover;
+  border-radius: var(--radius);
+
+  @include mq(md) {
+    --radius: 0 var(--border-radius) var(--border-radius) 0;
+    --width: 544px;
+  }
+}
+
+.card {
+  margin: 0 auto;
+  max-width: var(--card-width);
+  background: var(--card-background);
+  border-radius: var(--border-radius);
+
+  @include mq(md) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.image {
+  position: relative;
+}
+
+.filter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--accent);
+  opacity: 0.6;
+}
+
+.description {
+  --gap: 1rem;
+  @include gap(grid, var(--gap));
+
+  @include mq(md) {
+    --gap: 2rem;
+  }
+}
+
+.stats {
+  @include gap(grid, 1.5rem);
+  text-transform: uppercase;
+
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__stat {
+    @include gap(grid, 0.5rem);
+  }
+
+  &__uppercase {
+    color: var(--stat-headings);
+    letter-spacing: 0.04em;
+  }
+}

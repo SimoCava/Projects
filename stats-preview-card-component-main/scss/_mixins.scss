@@ -1,0 +1,17 @@
+@mixin headings($fs, $fw, $lh, $color) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  color: $color;
+}
+
+@mixin gap($display, $gap) {
+  display: $display;
+  grid-gap: $gap;
+}
+
+@mixin mq($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
