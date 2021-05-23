@@ -1,0 +1,115 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+  --text-headings: 2rem;
+  --text-base: 0.938rem;
+  --font-headings: "Big Shoulders Display", cursive;
+  --font-body: "Lexend Deca", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--very-light-gray);
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+  color: var(--transparent-white);
+  display: grid;
+  place-items: center;
+}
+
+@media (min-width: 60em) {
+  .container {
+    display: flex;
+    max-width: 57.5rem;
+    margin: 0 auto;
+  }
+}
+
+h1 {
+  font-size: var(--text-headings);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--very-light-gray);
+  text-transform: uppercase;
+  font-family: var(--font-headings);
+}
+
+p {
+  font-size: var(--text-body);
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: var(--transparent-white);
+}
+
+.card {
+  --border-radius: 0.5rem;
+  display: grid;
+  grid-gap: 1.5rem;
+  padding: 3rem;
+}
+.card:first-child {
+  --b-radius: var(--border-radius) var(--border-radius) 0 0;
+  border-radius: var(--b-radius);
+}
+@media (min-width: 60em) {
+  .card:first-child {
+    --b-radius: var(--border-radius) 0 0 var(--border-radius);
+  }
+}
+.card:last-child {
+  --b-radius: 0 0 var(--border-radius) var(--border-radius);
+  border-radius: var(--b-radius);
+}
+@media (min-width: 60em) {
+  .card:last-child {
+    --b-radius: 0 var(--border-radius) var(--border-radius) 0;
+  }
+}
+.card--orange {
+  background: var(--bright-orange);
+}
+.card--cyan {
+  background: var(--dark-cyan);
+}
+.card--dark-cyan {
+  background: var(--very-dark-cyan);
+}
+.card__btn {
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  min-height: 2.75rem;
+  min-width: 20ch;
+  width: min-content;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  background: var(--very-light-gray);
+  transition: background 200ms ease-in-out;
+}
+.card__btn:hover {
+  background: transparent;
+  color: var(--very-light-gray);
+  border: 1.5px solid var(--very-light-gray);
+}
+.card__btn--orange {
+  color: var(--bright-orange);
+}
+.card__btn--cyan {
+  color: var(--dark-cyan);
+}
+.card__btn--dark-cyan {
+  color: var(--very-dark-cyan);
+}
+
+/*# sourceMappingURL=main.css.map */
