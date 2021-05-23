@@ -7,4 +7,4 @@ This are links to my demos and projects!
 #### [Page animation with Javascript](https://simocava.github.io/Projects/page-animation-with-javascript)
 
 ## Frontend Mentor:
-#### [Stats Preview Card Component Main](stats-preview-card-component-main)
+#### [Stats Preview Card Component Main](https://simocava.github.io/Projects/stats-preview-card-component-main)
