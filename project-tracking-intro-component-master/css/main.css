@@ -1,0 +1,213 @@
+:root {
+  --font-family-body: "Barlow", sans-serif;
+  --font-family-headings: "Barlow Condensed", sans-serif;
+  --text-base-size: 1.125rem;
+  --text-headings-size: 2.5rem;
+  --text-headings-line-height: 1;
+  --text-body-line-height: 1.4;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --padding-x: 2rem;
+  --letter-spacing: 0.125rem;
+  --max-width-container: 71.25rem;
+  --red: hsl(0, 100%, 68%);
+  --very-dark-blue: hsl(230, 29%, 20%);
+  --dark-grayish-blue: hsl(230, 11%, 40%);
+  --grayish-blue: hsl(231, 7%, 65%);
+  --light-grayish-blue: hsl(207, 33%, 95%);
+}
+
+@media (min-width: 60em) {
+  :root {
+    --text-headings-size: 4rem;
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  font-size: var(--text-base-size);
+  font-family: var(--font-family-body);
+  background: var(--light-grayish-blue);
+  min-height: 100vh;
+  overflow-x: hidden;
+  /*   &::before {
+    content: '';
+    background: red;
+    height: 60vh;
+    width: 50%;
+    position: absolute;
+    right: 0;
+  } */
+}
+body::after {
+  content: url("../images/illustration-devices.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  left: 56%;
+  top: 16%;
+}
+
+h1,
+h2,
+h3 {
+  line-height: var(--text-headings-line-height);
+}
+
+h1 {
+  font-family: var(--font-family-headings);
+  font-size: var(--text-headings-size);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--text-headings-line-height);
+  color: var(--very-dark-blue);
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: var(--text-base-size);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--text-body-line-height);
+  color: var(--grayish-blue);
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+}
+
+p {
+  font-size: var(--text-base-size);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--text-body-line-height);
+  color: var(--dark-grayish-blue);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  min-height: 2.75rem;
+  min-width: 18ch;
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  background: var(--red);
+  font-family: var(--font-family-headings);
+  font-size: var(--text-base-size);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--text-body-line-height);
+  color: var(--light-grayish-blue);
+  transition: background 250ms ease-in-out;
+}
+button:hover {
+  background: #ff8585;
+}
+
+.container {
+  padding: var(--padding-x);
+}
+@media (min-width: 60em) {
+  .container {
+    max-width: var(--max-width-container);
+    margin: 0 auto;
+  }
+}
+
+main {
+  margin-top: 4rem;
+  display: grid;
+  grid-gap: 2.5rem;
+}
+
+.badge {
+  --size: 2rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background: var(--very-dark-blue);
+  color: var(--light-grayish-blue);
+  border-radius: 9999px;
+  padding: 0 1rem;
+  height: var(--size);
+  width: min-content;
+  font-family: var(--font-family-headings);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+}
+
+.heading {
+  display: grid;
+  grid-gap: 2rem;
+}
+.heading__main {
+  display: grid;
+  grid-gap: 0.5rem;
+}
+.heading__subtitle {
+  display: flex;
+  grid-gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.heading__cta {
+  display: flex;
+  grid-gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+@media (min-width: 60em) {
+  .heading {
+    display: grid;
+    grid-gap: 4rem;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.nav__items {
+  display: flex;
+  grid-gap: 2.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.nav__dot {
+  --size: 0.5rem;
+  border-radius: 9999px;
+  height: var(--size);
+  width: var(--size);
+  background: var(--grayish-blue);
+}
+.nav__item, .nav__item--variant {
+  font-size: var(--text-base-size);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--text-body-line-height);
+  color: var(--very-dark-blue);
+  font-family: var(--font-family-headings);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+}
+.nav__item--variant {
+  color: var(--grayish-blue);
+}
+
+/*# sourceMappingURL=main.css.map */

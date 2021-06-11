@@ -1,0 +1,15 @@
+.badge {
+  --size: 2rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background: var(--very-dark-blue);
+  color: var(--light-grayish-blue);
+  border-radius: 9999px;
+  padding: 0 1rem;
+  height: var(--size);
+  width: min-content;
+  font-family: var(--font-family-headings);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+}

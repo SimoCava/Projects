@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  font-size: var(--text-base-size);
+  font-family: var(--font-family-body);
+  background: var(--light-grayish-blue);
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  /*   &::before {
+    content: '';
+    background: red;
+    height: 60vh;
+    width: 50%;
+    position: absolute;
+    right: 0;
+  } */
+
+  &::after {
+    content: url('../images/illustration-devices.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    left: 56%;
+    top: 16%;
+  }
+}
+
+h1,
+h2,
+h3 {
+  line-height: var(--text-headings-line-height);
+}
+
+h1 {
+  font-family: var(--font-family-headings);
+  @include headings(
+    var(--text-headings-size),
+    var(--font-weight-bold),
+    var(--text-headings-line-height),
+    var(--very-dark-blue)
+  );
+  text-transform: uppercase;
+}
+
+h3 {
+  @include headings(
+    var(--text-base-size),
+    var(--font-weight-normal),
+    var(--text-body-line-height),
+    var(--grayish-blue)
+  );
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+}
+
+p {
+  @include headings(
+    var(--text-base-size),
+    var(--font-weight-normal),
+    var(--text-body-line-height),
+    var(--dark-grayish-blue)
+  );
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  min-height: 2.75rem;
+  min-width: 18ch;
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  background: var(--red);
+  font-family: var(--font-family-headings);
+  @include headings(
+    var(--text-base-size),
+    var(--font-weight-normal),
+    var(--text-body-line-height),
+    var(--light-grayish-blue)
+  );
+  transition: background 250ms ease-in-out;
+
+  &:hover {
+    background: lighten($red, 8%);
+  }
+}
+
+.container {
+  padding: var(--padding-x);
+
+  @include mq(md) {
+    max-width: var(--max-width-container);
+    margin: 0 auto;
+  }
+}
+
+main {
+  margin-top: 4rem;
+  @include gap(grid, 2.5rem);
+}

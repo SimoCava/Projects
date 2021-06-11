@@ -1,0 +1,11 @@
+{
+  "name": "project-tracking-intro-component-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Project tracking intro component coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss/main.scss:css/main.css"
+  },
+  "author": "Simone Cavallini",
+  "license": "ISC"
+}

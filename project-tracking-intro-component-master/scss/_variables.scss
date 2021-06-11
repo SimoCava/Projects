@@ -1,0 +1,35 @@
+:root {
+  --font-family-body: 'Barlow', sans-serif;
+  --font-family-headings: 'Barlow Condensed', sans-serif;
+
+  --text-base-size: 1.125rem;
+  --text-headings-size: 2.5rem;
+
+  --text-headings-line-height: 1;
+  --text-body-line-height: 1.4;
+
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  --padding-x: 2rem;
+  --letter-spacing: 0.125rem;
+  --max-width-container: 71.25rem;
+
+  // Colors
+  --red: hsl(0, 100%, 68%);
+  --very-dark-blue: hsl(230, 29%, 20%);
+  --dark-grayish-blue: hsl(230, 11%, 40%);
+  --grayish-blue: hsl(231, 7%, 65%);
+  --light-grayish-blue: hsl(207, 33%, 95%);
+}
+
+$red: hsl(0, 100%, 68%);
+$breakpoints-up: (
+  'md': '60em',
+);
+
+@include mq(md) {
+  :root {
+    --text-headings-size: 4rem;
+  }
+}

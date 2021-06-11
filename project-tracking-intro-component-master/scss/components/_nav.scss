@@ -1,0 +1,34 @@
+.nav {
+  display: flex;
+  @include flex(center, space-between);
+
+  &__items {
+    @include gap(flex, 2.5rem);
+    @include flex(center);
+  }
+
+  &__dot {
+    --size: 0.5rem;
+    border-radius: 9999px;
+    height: var(--size);
+    width: var(--size);
+    background: var(--grayish-blue);
+  }
+
+  &__item {
+    @include headings(
+      var(--text-base-size),
+      var(--font-weight-bold),
+      var(--text-body-line-height),
+      var(--very-dark-blue)
+    );
+    font-family: var(--font-family-headings);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
+
+    &--variant {
+      @extend .nav__item;
+      color: var(--grayish-blue);
+    }
+  }
+}

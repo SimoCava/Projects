@@ -1,0 +1,21 @@
+.heading {
+  @include gap(grid, 2rem);
+
+  &__main {
+    @include gap(grid, 0.5rem);
+  }
+
+  &__subtitle {
+    @include gap(flex, 1rem);
+    @include flex(center, flex-start);
+  }
+
+  &__cta {
+    @include gap(flex, 1rem);
+    @include flex(center, flex-start);
+  }
+
+  @include mq(md) {
+    @include gap(grid, 4rem);
+  }
+}
