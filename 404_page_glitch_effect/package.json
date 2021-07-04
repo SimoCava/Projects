@@ -1,0 +1,11 @@
+{
+  "name": "404_page_glitch_effect",
+  "version": "1.0.0",
+  "description": "Error 404 page effect",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch main.scss:css/main.css"
+  },
+  "author": "Cavallini Simone",
+  "license": "ISC"
+}
