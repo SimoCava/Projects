@@ -13,4 +13,3 @@ This are links to my demos and projects!
 
 ## Codewell:
 #### [Fiber Landing Page](https://simocava.github.io/Projects/fiber-landing-page)
-[Fiber Landing Page](https://simocava.github.io/Projects/fiber-landing-page/register)
