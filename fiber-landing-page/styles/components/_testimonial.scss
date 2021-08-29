@@ -1,0 +1,28 @@
+@use '../abstract/mixins' as *;
+
+.testimonial {
+  @include gap(grid, 0.5rem);
+  border: 1.5px solid var(--color-light-gray);
+  background: var(--color-white);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+
+  &__header {
+    @include gap(flex, 1rem);
+    @include flexProps(center);
+  }
+
+  &__avatar {
+    display: grid;
+    place-content: center;
+  }
+
+  &__infos {
+    @include gap(grid, 0.25rem);
+
+    h5 + h5 {
+      color: var(--color-black);
+      font-weight: 400;
+    }
+  }
+}

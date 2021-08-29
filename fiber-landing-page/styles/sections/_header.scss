@@ -1,0 +1,62 @@
+@use '../abstract/mixins' as *;
+
+.header {
+  &__content {
+    @include gap(grid, 1rem);
+
+    @include mq(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__illustration {
+    @include mq(md) {
+      order: 1;
+    }
+  }
+
+  &__presentation {
+    @include gap(grid, 1.5rem);
+    place-content: center;
+  }
+
+  &__review {
+    display: none;
+
+    @include mq(md) {
+      @include gap(inline-flex, 1rem);
+      @include flexProps(center, flex-start);
+    }
+  }
+
+  &__text {
+    @include gap(grid, 1rem);
+  }
+
+  &__actions {
+    --display: grid;
+    --align: center;
+    @include gap(var(--display), 1rem);
+    text-align: var(--align);
+
+    @include mq(md) {
+      --display: flex;
+      --align: start;
+      @include flexProps(center);
+    }
+  }
+
+  &__checkmarks {
+    --display: grid;
+    @include gap(var(--display), 1rem);
+
+    @include mq(md) {
+      --display: inline-flex;
+    }
+  }
+
+  &__checkmark {
+    @include gap(inline-flex, 0.5rem);
+    @include flexProps(center);
+  }
+}

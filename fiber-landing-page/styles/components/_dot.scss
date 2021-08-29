@@ -1,0 +1,22 @@
+@use '../abstract/mixins' as *;
+@use '../abstract/variables' as *;
+
+.dots {
+  @include gap(flex, 0.5rem);
+  @include flexProps(center);
+
+  &__dot {
+    --dimension: 0.75rem;
+    --bg: var(--color-semi-light-gray);
+    display: block;
+    border-radius: 50%;
+    width: var(--dimension);
+    height: var(--dimension);
+    background: var(--bg);
+
+    &--active {
+      @extend .dots__dot;
+      --bg: var(--color-white);
+    }
+  }
+}

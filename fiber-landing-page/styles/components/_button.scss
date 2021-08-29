@@ -1,0 +1,62 @@
+@use '../abstract/mixins' as *;
+@use '../abstract/variables' as *;
+
+@mixin button-bg($bg) {
+  background: $bg;
+
+  &:hover,
+  &:active {
+    background-color: scale-color($bg, $lightness: -20%);
+  }
+
+  &:focus {
+    outline-style: solid;
+    outline-color: transparent;
+    box-shadow: 0 0 0 2px scale-color($bg, $lightness: -40%);
+  }
+}
+
+.btn {
+  --width: 100%;
+  --font-weight: 500;
+  display: flex;
+  @include flexProps(center, center);
+  align-self: start;
+  width: var(--width);
+  border-radius: var(--border-radius-button);
+  padding: 0.75rem 1.25rem;
+  min-width: 10ch;
+  min-height: 44px;
+  @include typography(var(--font-base), var(--font-weight), 1.1);
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  text-align: center;
+  transition: var(--animation);
+
+  @include mq(md) {
+    --width: max-content;
+  }
+}
+
+.btn--primary {
+  @include button-bg($color-primary);
+  color: var(--color-white);
+}
+
+.btn--inverted {
+  background: var(--color-white);
+  color: var(--color-primary);
+}
+
+.btn--ghost {
+  --font-weight: 600;
+  background: var(--color-white);
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-light-gray);
+}
+
+.btn--link {
+  text-decoration: underline;
+  font-weight: 600;
+  color: $color-primary;
+}

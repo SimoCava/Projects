@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Fiber Landing Page - Register</title>
+  </head>
+  <body>
+    <div class="register">
+      <div class="register__left container">
+        <nav class="menu">
+          <a href="index.html" class="menu__logo">Fiber</a>
+        </nav>
+
+        <div class="register__form">
+          <h1>Create your Fiber account</h1>
+
+          <label for="name">
+            <span>Your Name</span>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              minlength="4"
+              maxlength="16"
+            />
+          </label>
+
+          <label for="email">
+            <span>E-mail</span>
+            <input type="email" id="email" name="email" />
+          </label>
+
+          <label for="pass">
+            <span>Password</span>
+            <input
+              type="password"
+              id="pass"
+              name="password"
+              minlength="8"
+              required
+            />
+          </label>
+
+          <div class="d-grid gap-24">
+            <div class="register__accept-terms">
+            <input type="checkbox" name="terms" value="accepted" class="checkbox" />
+            <label for="terms" class="register__text-terms">
+              <p>
+                By creating an account on Fiber, you agree to the 
+                <a href="#" class="btn--link">Terms & Conditions.</a>
+              </p>
+              </label>
+            </label>
+          </div>
+
+          <button class="btn btn--primary w-full">Create Fiber Account</button>
+          <p class="text-center">
+            Already have an account? <a href="#" class="bt btn--link">Sign in</a>
+          </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="register__right">
+        <img src="Assets/sign-up-image.png" alt="Sign Up Image" />
+        <div class="register__slider-captions">
+          <h2>Unparalleled Templates</h2>
+          <p>Crafted by a team of professional designers, our templates are eunparaalleled in the market.</p>
+          <div class="dots">
+            <span class="dots__dot--active"></span>
+            <span class="dots__dot"></span>
+            <span class="dots__dot"></span>
+            <span class="dots__dot"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

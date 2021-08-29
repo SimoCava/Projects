@@ -1,0 +1,65 @@
+@use '../abstract/mixins' as *;
+
+.menu {
+  position: relative;
+  display: flex;
+  @include flexProps(center, space-between);
+  width: 100%;
+  min-height: 5.6rem;
+  background: transparent;
+
+  &__logo {
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  @include mq-down(md) {
+    &__navs,
+    &__actions,
+    &__navs--desktop,
+    &__actions--desktop {
+      display: none;
+    }
+
+    &__navs.collapsed,
+    &__actions.collapsed {
+      display: block;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--color-cream);
+      box-shadow: 0 15px 30px -10px var(--shadow-menu);
+      border-radius: 0 0 var(--border-radius) var(--border-radius);
+    }
+
+    &__nav {
+      display: block;
+      padding: 1rem 1.5rem;
+    }
+
+    &__icon {
+      cursor: pointer;
+    }
+  }
+
+  @include mq(md) {
+    &__navs,
+    &__actions {
+      display: none;
+    }
+
+    &__navs--desktop {
+      @include gap(flex, 1rem);
+    }
+
+    &__icon {
+      display: none;
+    }
+
+    &__actions--desktop {
+      @include gap(flex, 1.5rem);
+      @include flexProps(center, flex-end);
+    }
+  }
+}

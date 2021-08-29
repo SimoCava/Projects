@@ -1,0 +1,36 @@
+:root {
+  --color-primary: #4d13d1;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray: #4f4f4f;
+  --color-semi-light-gray: #a9a9a9;
+  --color-light-gray: #ececec;
+  --color-cream: #fbf8f3;
+
+  --font-family: 'Inter', sans-serif;
+  --font-base: 16px;
+  --font-heading-1: clamp(
+    2.5rem,
+    calc(2.5rem + ((1vw - 0.234375rem) * 0.7512)),
+    3rem
+  );
+  --font-heading-2: clamp(
+    1.5rem,
+    calc(1.5rem + ((1vw - 0.234375rem) * 0.7512)),
+    2rem
+  );
+  --font-heading-5: 0.875rem;
+  --width-container: 71.25rem;
+  --padding-container: 1.5rem;
+  --border-radius: 0.5rem;
+  --border-radius-button: 0.25rem;
+  --shadow-menu: rgba(150, 170, 180, 0.5);
+  --animation: 100ms all ease-in-out;
+}
+
+$color-primary: #4d13d1;
+$color-white: #ffffff;
+$breakpoints: (
+  sm: 36rem,
+  md: 48rem,
+);

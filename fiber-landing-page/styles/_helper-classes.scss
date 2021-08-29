@@ -1,0 +1,21 @@
+@use 'abstract/mixins' as *;
+
+$amounts: (8, 16, 24, 32, 40, 48, 56, 64);
+
+@each $gap in $amounts {
+  .gap-#{ $gap } {
+    grid-gap: #{$gap}px !important;
+  }
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.d-grid {
+  display: grid !important;
+}
+
+.w-full {
+  width: 100% !important;
+}

@@ -1,0 +1,6 @@
+@use '../abstract/mixins' as *;
+
+.testimonials {
+  @include gap(grid, 1.5rem);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}

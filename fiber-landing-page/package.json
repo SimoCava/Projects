@@ -1,0 +1,11 @@
+{
+  "name": "fiber-landing-page",
+  "version": "1.0.0",
+  "description": "Codewell's aim is to provide you with real-world design templates that you can use to practice your HTML and CSS projects.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch styles/main.scss:styles/main.css"
+  },
+  "author": "Simone Cavallini",
+  "license": "ISC"
+}

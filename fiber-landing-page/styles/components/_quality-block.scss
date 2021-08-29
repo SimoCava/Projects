@@ -1,0 +1,5 @@
+@use '../abstract/mixins' as *;
+
+.quality-block {
+  @include gap(grid, 0.5rem);
+}

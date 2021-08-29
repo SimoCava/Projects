@@ -1,0 +1,49 @@
+@use '../abstract/mixins' as *;
+
+.register {
+  height: 100vh;
+
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__form {
+    @include gap(grid, 2.5rem);
+    height: calc(100% - 25vh);
+    margin-top: 2rem;
+  }
+
+  &__accept-terms {
+    @include gap(flex, 0.5rem);
+    @include flexProps;
+  }
+
+  &__right {
+    --display: none;
+    display: var(--display);
+
+    @include mq(md) {
+      --display: grid;
+      place-content: center;
+      grid-gap: 2.5rem;
+      padding-inline: clamp(1.5rem, 16.5vw - 6.4rem, 8rem);
+      background: var(--color-primary);
+    }
+  }
+
+  &__slider-captions {
+    @include gap(grid, 0.5rem);
+    place-items: center;
+
+    h2,
+    p {
+      color: var(--color-white);
+    }
+
+    p {
+      max-width: 40ch;
+      text-align: center;
+    }
+  }
+}

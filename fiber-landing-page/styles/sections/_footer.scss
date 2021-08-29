@@ -1,0 +1,27 @@
+@use '../abstract/mixins' as *;
+
+.footer {
+  @include gap(grid, 2rem);
+  @include mq(md) {
+    grid-template-columns: 400px repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  &__block {
+    @include gap(grid, 0.875rem);
+    height: max-content;
+
+    p:first-child {
+      font-weight: 600;
+      color: var(--color-black);
+    }
+
+    li {
+      @include gap(grid, 0.5rem);
+    }
+
+    li > a {
+      @include typography(inherit, 400, 24px);
+      color: var(--color-gray);
+    }
+  }
+}
